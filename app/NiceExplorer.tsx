@@ -10,9 +10,11 @@ import {
   useState,
 } from "react";
 import {
+  mdiCheck,
   mdiChevronLeft,
   mdiChevronRight,
   mdiClose,
+  mdiCogOutline,
   mdiMagnify,
 } from "@mdi/js";
 import classesJson from "./data/classes.json";
@@ -31,6 +33,12 @@ type NiceClass = {
 };
 
 type IconSet = "single" | "generated" | "svg";
+
+const iconSetOptions: Array<{ value: IconSet; label: string }> = [
+  { value: "svg", label: "Basic" },
+  { value: "single", label: "Detailed" },
+  { value: "generated", label: "Complex" },
+];
 
 const niceClasses = classesJson as NiceClass[];
 function Icon({
@@ -115,9 +123,12 @@ function headingParts(value: string) {
 export default function NiceExplorer() {
   const [query, setQuery] = useState("");
   const [iconSet, setIconSet] = useState<IconSet>("single");
+  const [settingsOpen, setSettingsOpen] = useState(false);
   const [selectedNumber, setSelectedNumber] = useState<number | null>(null);
   const [panelOpen, setPanelOpen] = useState(false);
   const searchRef = useRef<HTMLInputElement>(null);
+  const settingsRef = useRef<HTMLDivElement>(null);
+  const settingsButtonRef = useRef<HTMLButtonElement>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
   const panelRef = useRef<HTMLElement>(null);
   const cardRefs = useRef(new Map<number, HTMLButtonElement>());
@@ -148,9 +159,13 @@ export default function NiceExplorer() {
     ? niceClasses[selectedNumber - 1]
     : null;
   const selectedMeta = selectedNumber ? classMeta[selectedNumber - 1] : null;
+  const iconSetLabel =
+    iconSetOptions.find((option) => option.value === iconSet)?.label ??
+    "Detailed";
 
   const openClass = useCallback((number: number) => {
     if (closeTimerRef.current) window.clearTimeout(closeTimerRef.current);
+    setSettingsOpen(false);
     setSelectedNumber(number);
     setPanelOpen(true);
   }, []);
@@ -185,7 +200,29 @@ export default function NiceExplorer() {
   }, [panelOpen]);
 
   useEffect(() => {
+    if (!settingsOpen) return;
+    const selectedOption = settingsRef.current?.querySelector<HTMLElement>(
+      '[role="menuitemradio"][aria-checked="true"]',
+    );
+    selectedOption?.focus({ preventScroll: true });
+
+    const dismissSettings = (event: PointerEvent) => {
+      if (!settingsRef.current?.contains(event.target as Node)) {
+        setSettingsOpen(false);
+      }
+    };
+    document.addEventListener("pointerdown", dismissSettings);
+    return () => document.removeEventListener("pointerdown", dismissSettings);
+  }, [settingsOpen]);
+
+  useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape" && settingsOpen) {
+        event.preventDefault();
+        setSettingsOpen(false);
+        settingsButtonRef.current?.focus({ preventScroll: true });
+        return;
+      }
       if (event.key === "Escape" && panelOpen) {
         event.preventDefault();
         closePanel();
@@ -198,12 +235,13 @@ export default function NiceExplorer() {
         !(event.target instanceof HTMLTextAreaElement)
       ) {
         event.preventDefault();
+        setSettingsOpen(false);
         searchRef.current?.focus();
       }
     };
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
-  }, [closePanel, panelOpen]);
+  }, [closePanel, panelOpen, settingsOpen]);
 
   useEffect(
     () => () => {
@@ -215,6 +253,28 @@ export default function NiceExplorer() {
   const submitSearch = (event: FormEvent) => {
     event.preventDefault();
     if (ranked[0]) openClass(ranked[0].entry.number);
+  };
+
+  const navigateSettings = (event: ReactKeyboardEvent<HTMLDivElement>) => {
+    if (!["ArrowDown", "ArrowUp", "Home", "End"].includes(event.key)) {
+      return;
+    }
+    const options = Array.from(
+      event.currentTarget.querySelectorAll<HTMLButtonElement>(
+        '[role="menuitemradio"]',
+      ),
+    );
+    if (!options.length) return;
+    event.preventDefault();
+    const current = Math.max(0, options.indexOf(document.activeElement as HTMLButtonElement));
+    const next =
+      event.key === "Home"
+        ? 0
+        : event.key === "End"
+          ? options.length - 1
+          : (current + (event.key === "ArrowDown" ? 1 : -1) + options.length) %
+            options.length;
+    options[next]?.focus();
   };
 
   const trapPanelFocus = (event: ReactKeyboardEvent<HTMLElement>) => {
@@ -311,18 +371,56 @@ export default function NiceExplorer() {
           Nice Classification
         </a>
         <div className="topbar-tools">
-          <label className="icon-set-control">
-            <span className="sr-only">Icon style</span>
-            <select
-              value={iconSet}
-              onChange={(event) => setIconSet(event.target.value as IconSet)}
-              aria-label="Icon style"
+          <div
+            className="settings-control"
+            ref={settingsRef}
+            onBlur={(event) => {
+              if (!event.currentTarget.contains(event.relatedTarget)) {
+                setSettingsOpen(false);
+              }
+            }}
+          >
+            <button
+              className="settings-button"
+              type="button"
+              aria-label={`Icon style: ${iconSetLabel}`}
+              aria-haspopup="menu"
+              aria-expanded={settingsOpen}
+              onClick={() => setSettingsOpen((open) => !open)}
+              ref={settingsButtonRef}
             >
-              <option value="svg">Basic</option>
-              <option value="single">Detailed</option>
-              <option value="generated">Complex</option>
-            </select>
-          </label>
+              <Icon path={mdiCogOutline} />
+            </button>
+            <div
+              className="settings-menu"
+              role="menu"
+              aria-label="Icon style"
+              hidden={!settingsOpen}
+              onKeyDown={navigateSettings}
+            >
+              {iconSetOptions.map((option) => {
+                const active = option.value === iconSet;
+                return (
+                  <button
+                    className="settings-option"
+                    type="button"
+                    role="menuitemradio"
+                    aria-checked={active}
+                    tabIndex={active ? 0 : -1}
+                    key={option.value}
+                    onClick={() => {
+                      setIconSet(option.value);
+                      setSettingsOpen(false);
+                      settingsButtonRef.current?.focus({ preventScroll: true });
+                    }}
+                  >
+                    <span>{option.label}</span>
+                    {active && <Icon path={mdiCheck} />}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
           <form className="search-form" role="search" onSubmit={submitSearch}>
             <Icon path={mdiMagnify} className="search-icon" />
             <label className="sr-only" htmlFor="class-search">

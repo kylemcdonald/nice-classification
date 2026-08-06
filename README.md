@@ -16,7 +16,7 @@ A fast, single-page guide to all 45 Nice classes for trademark goods and service
 
 ## Class icons
 
-The icon dropdown switches instantly among **Basic** (the original SVG marks), **Detailed** (the new single-object image set), and **Complex** (the first generated image set). Detailed is the default. Both raster sets are used as masks so every mark retains its class-group color.
+The gear menu switches instantly among **Basic** (the original SVG marks), **Detailed** (the new single-object image set), and **Complex** (the first generated image set). Detailed is the default. Both raster sets are used as masks so every mark retains its class-group color.
 
 The two image sets were generated independently with OpenAI’s [`gpt-image-2`](https://developers.openai.com/api/docs/guides/image-generation) at medium quality and 1024×1024 pixels. Each prompt supplies the official class heading and asks the model to choose its own visual metaphor. The newer prompt strongly prefers one coherent central object and permits one small supporting object only when necessary for clarity.
 

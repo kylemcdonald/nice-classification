@@ -36,10 +36,13 @@ test("server-renders the complete classification map", async () => {
   assert.match(html, /aria-label="Class 1: Chemicals"/);
   assert.match(html, /aria-label="Class 45: Legal &amp; security"/);
   assert.match(html, /class-icons-single\/class-24\.png/);
-  assert.match(html, /<select[^>]+aria-label="Icon style"/);
-  assert.match(html, /<option value="svg">Basic<\/option>/);
-  assert.match(html, /<option value="single" selected="">Detailed<\/option>/);
-  assert.match(html, /<option value="generated">Complex<\/option>/);
+  assert.match(html, /aria-label="Icon style: Detailed"/);
+  assert.match(html, /aria-haspopup="menu"/);
+  assert.equal((html.match(/role="menuitemradio"/g) ?? []).length, 3);
+  assert.match(html, /<span>Basic<\/span>/);
+  assert.match(html, /<span>Detailed<\/span>/);
+  assert.match(html, /<span>Complex<\/span>/);
+  assert.doesNotMatch(html, /<select/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|Starter Project/);
 });
 
