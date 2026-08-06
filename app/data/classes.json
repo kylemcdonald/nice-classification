@@ -5,7 +5,7 @@
     "note": "Class 1 includes mainly chemical products for use in industry, science and agriculture, including those which go to the making of products belonging to other classes.",
     "includes": [
       "sensitized paper;",
-      "tyre repairing compositions;",
+      "tire repairing compositions;",
       "salt for preserving, other than for foodstuffs;",
       "certain additives for use in the food industry, for example, pectin, lecithin, enzymes and chemical preservatives;",
       "certain ingredients for use in the manufacture of cosmetics and pharmaceuticals, for example, vitamins, preservatives, essential oils and antioxidants;",
@@ -101,7 +101,7 @@
       "ingredients for use in the manufacture of pharmaceuticals, for example, vitamins, preservatives and antioxidants (Cl. 1);",
       "sanitary preparations being non-medicated toiletries (Cl. 3);",
       "deodorants for human beings or for animals (Cl. 3);",
-      "support bandages, orthopaedic bandages (Cl. 10);",
+      "support bandages, orthopedic bandages (Cl. 10);",
       "meal replacements and dietetic foods and beverages not specified as being for medical or veterinary purposes, which should be classified in the appropriate food or beverage classes, for example, low-fat potato crisps (Cl. 29), high-protein cereal bars (Cl. 30), isotonic beverages (Cl. 32)."
     ]
   },
@@ -136,14 +136,14 @@
       "electric cleaning and polishing apparatus, for example, electric shoe polishers, electric machines and apparatus for carpet shampooing and vacuum cleaners;",
       "3D printers;",
       "industrial robots;",
-      "certain special vehicles not for transportation purposes, for example, road sweeping machines, road making machines, bulldozers, snow ploughs, as well as rubber tracks as parts of those vehicles’ crawlers."
+      "certain special vehicles not for transportation purposes, for example, road sweeping machines, road making machines, bulldozers, snow plows, as well as rubber tracks as parts of those vehicles’ crawlers."
     ],
     "excludes": [
       "hand tools and implements, hand-operated (Cl. 8);",
       "certain special machines, for example, automated teller machines (Cl. 9), respirators for artificial respiration (Cl. 10), refrigerating apparatus and machines (Cl. 11);",
       "humanoid robots with artificial intelligence, laboratory robots, teaching robots, security surveillance robots (Cl. 9), surgical robots (Cl. 10), robotic cars (Cl. 12), robotic drums (Cl. 15), toy robots (Cl. 28);",
       "motors and engines for land vehicles (Cl. 12);",
-      "treads for vehicles, as well as tyres for all kinds of vehicle wheels (Cl. 12)."
+      "treads for vehicles, as well as tires for all kinds of vehicle wheels (Cl. 12)."
     ]
   },
   {
@@ -161,7 +161,7 @@
     "excludes": [
       "machine tools and implements driven by a motor (Cl. 7);",
       "surgical cutlery (Cl. 10);",
-      "pumps for bicycle tyres (Cl. 12), pumps specially adapted for use with balls for games (Cl. 28);",
+      "pumps for bicycle tires (Cl. 12), pumps specially adapted for use with balls for games (Cl. 28);",
       "side arms being firearms (Cl. 13);",
       "paper knives, paper shredders for office use (Cl. 16);",
       "handles for objects that are classified in various classes according to their function or purpose, for example, walking stick handles, umbrella handles (Cl. 18), broom handles (Cl. 21);",
@@ -171,13 +171,13 @@
   },
   {
     "number": 9,
-    "heading": "Scientific, research, navigation, surveying, photographic, cinematographic, audiovisual, optical, weighing, measuring, signalling, detecting, testing, inspecting, life-saving and teaching apparatus and instruments; apparatus and instruments for conducting, switching, transforming, accumulating, regulating or controlling the distribution or use of electricity; apparatus and instruments for recording, transmitting, reproducing or processing sound, images or data; recorded and downloadable multimedia files, computer software, blank digital or analogue recording and storage media; mechanisms for coin-operated apparatus; cash registers, calculating devices; computers and computer peripheral devices; diving suits, divers’ masks, ear plugs for divers, nose clips for divers, gloves for divers, breathing apparatus for underwater swimming; fire-extinguishing apparatus.",
+    "heading": "Scientific, research, navigation, surveying, photographic, cinematographic, audiovisual, optical, weighing, measuring, signaling, detecting, testing, inspecting, life-saving and teaching apparatus and instruments; apparatus and instruments for conducting, switching, transforming, accumulating, regulating or controlling the distribution or use of electricity; apparatus and instruments for recording, transmitting, reproducing or processing sound, images or data; recorded and downloadable multimedia files, computer software, blank digital or analog recording and storage media; mechanisms for coin-operated apparatus; cash registers, calculating devices; computers and computer peripheral devices; diving suits, divers’ masks, ear plugs for divers, nose clips for divers, gloves for divers, breathing apparatus for underwater swimming; fire-extinguishing apparatus.",
     "note": "Class 9 includes mainly apparatus and instruments for scientific or research purposes, audiovisual and information technology equipment, as well as safety and life-saving equipment.",
     "includes": [
       "apparatus and instruments for scientific research in laboratories;",
       "training apparatus and simulators, for example, resuscitation mannequins, simulators for the steering and control of vehicles;",
       "apparatus and instruments for controlling and monitoring aircraft, watercraft and unmanned vehicles, for example, navigational instruments, transmitters, compasses for measuring, GPS apparatus, automatic steering apparatus for vehicles;",
-      "safety and security apparatus and instruments, for example, safety nets, signalling lights, traffic-light apparatus, sound alarms, security token hardware for user authentication;",
+      "safety and security apparatus and instruments, for example, safety nets, signaling lights, traffic-light apparatus, sound alarms, security token hardware for user authentication;",
       "clothing that protects against serious or life-threatening injuries, for example, clothing for protection against accidents, irradiation and fire, bullet-proof clothing, protective helmets, head guards for sports, mouth guards for sports, protective suits for aviators, knee-pads for workers;",
       "optical apparatus and instruments, for example, magnifying glasses, mirrors for inspecting work, peepholes;",
       "magnets;",
@@ -207,11 +207,11 @@
   },
   {
     "number": 10,
-    "heading": "Surgical, medical, dental and veterinary apparatus and instruments; artificial limbs, eyes and teeth; spectacles, contact lenses and sunglasses; orthopaedic articles; suture materials; therapeutic and assistive devices adapted for persons with disabilities; massage apparatus; apparatus, devices and articles for nursing infants; sexual activity apparatus, devices and articles.",
+    "heading": "Surgical, medical, dental and veterinary apparatus and instruments; artificial limbs, eyes and teeth; spectacles, contact lenses and sunglasses; orthopedic articles; suture materials; therapeutic and assistive devices adapted for persons with disabilities; massage apparatus; apparatus, devices and articles for nursing infants; sexual activity apparatus, devices and articles.",
     "note": "Class 10 includes mainly surgical, medical, dental and veterinary apparatus, instruments and articles generally used for the diagnosis, treatment or improvement of function or condition of persons and animals.",
     "includes": [
-      "support bandages, orthopaedic bandages;",
-      "special clothing for medical purposes, for example, compression garments, stockings for varices, strait jackets, orthopaedic footwear;",
+      "support bandages, orthopedic bandages;",
+      "special clothing for medical purposes, for example, compression garments, stockings for varices, strait jackets, orthopedic footwear;",
       "articles, instruments and devices for menstruation, contraception and childbirth, for example, menstrual cups, pessaries, condoms, childbirth mattresses, forceps;",
       "therapeutic and prosthetic articles and devices for implantation made of artificial or synthetic materials, for example, surgical implants comprised of artificial materials, artificial breasts, brain pacemakers, biodegradable bone fixation implants;",
       "furniture especially made for medical purposes, for example, armchairs for medical or dental purposes, air mattresses for medical purposes, operating tables."
@@ -255,7 +255,7 @@
       "steam producing apparatus being parts of machines (Cl. 7);",
       "ovens for laboratory use (Cl. 9);",
       "photovoltaic cells (Cl. 9);",
-      "signalling lights (Cl. 9);",
+      "signaling lights (Cl. 9);",
       "electrically heated pads, cushions and blankets, for medical purposes (Cl. 10);",
       "cooking utensils that do not have an integrated heat source, for example, non-electric griddles and grills, non-electric waffle irons, non-electric pressure cookers (Cl. 21);",
       "non-electric portable coolers (Cl. 21);",
@@ -273,7 +273,7 @@
       "air cushion vehicles;",
       "remote control vehicles, other than toys;",
       "parts of vehicles, for example, bumpers, windscreens, steering wheels;",
-      "treads for vehicles, as well as tyres for all kinds of vehicle wheels."
+      "treads for vehicles, as well as tires for all kinds of vehicle wheels."
     ],
     "excludes": [
       "railway material of metal (Cl. 6);",
@@ -292,7 +292,7 @@
     "includes": [
       "rescue flares, explosive or pyrotechnic;",
       "flare pistols;",
-      "sprays for personal defence purposes;",
+      "sprays for personal defense purposes;",
       "explosive fog signals, signal rocket flares;",
       "air pistols being weapons;",
       "bandoliers for weapons;",
@@ -302,7 +302,7 @@
       "grease for weapons (Cl. 4);",
       "blades being weapons (Cl. 8);",
       "side arms, other than firearms (Cl. 8);",
-      "non-explosive fog signals, rescue laser signalling flares (Cl. 9);",
+      "non-explosive fog signals, rescue laser signaling flares (Cl. 9);",
       "telescopic sights for firearms (Cl. 9);",
       "flaming torches (Cl. 11);",
       "crackers (party novelties) (Cl. 28);",
@@ -313,21 +313,21 @@
   },
   {
     "number": 14,
-    "heading": "Precious metals and their alloys; jewellery, precious and semi-precious stones; horological and chronometric instruments.",
-    "note": "Class 14 includes mainly precious metals and certain goods made of precious metals or coated therewith, as well as jewellery, clocks and watches, and component parts therefor.",
+    "heading": "Precious metals and their alloys; jewelry, precious and semi-precious stones; horological and chronometric instruments.",
+    "note": "Class 14 includes mainly precious metals and certain goods made of precious metals or coated therewith, as well as jewelry, clocks and watches, and component parts therefor.",
     "includes": [
-      "jewellery, including imitation jewellery, for example, paste jewellery;",
+      "jewelry, including imitation jewelry, for example, paste jewelry;",
       "cuff links, tie pins, tie clips;",
       "key rings, key chains and charms therefor;",
-      "jewellery charms;",
-      "jewellery boxes;",
-      "component parts for jewellery, clocks and watches, for example, clasps and beads for jewellery, movements for clocks and watches, clock hands, watch springs, watch crystals;",
+      "jewelry charms;",
+      "jewelry boxes;",
+      "component parts for jewelry, clocks and watches, for example, clasps and beads for jewelry, movements for clocks and watches, clock hands, watch springs, watch crystals;",
       "certain goods made of precious metals not otherwise classified by function or purpose, for example, all-purpose boxes of precious metal, statues, busts and works of art of precious metal."
     ],
     "excludes": [
       "certain goods made of precious metals or coated therewith that are classified according to their function or purpose, for example, metals in foil and powder form for use in painting, decorating, printing and art (Cl. 2), dental amalgams of gold (Cl. 5), cutlery (Cl. 8), electric contacts (Cl. 9), pen nibs of gold (Cl. 16), teapots (Cl. 21), gold and silver embroidery (Cl. 26), cigar boxes (Cl. 34);",
       "smartwatches (Cl. 9);",
-      "charms, other than for jewellery, key rings or key chains (Cl. 26);",
+      "charms, other than for jewelry, key rings or key chains (Cl. 26);",
       "objects of art not made of precious metals or coated therewith that are classified according to the material of which they are made, for example, works of art of metal (Cl. 6), of stone, concrete or marble (Cl. 19), of wood, wax, plaster, plastic or resin (Cl. 20), of porcelain, ceramic, earthenware, terra-cotta or glass (Cl. 21)."
     ]
   },
@@ -344,7 +344,7 @@
       "colophony (rosin) for stringed musical instruments."
     ],
     "excludes": [
-      "apparatus for the recording, transmission, amplification and reproduction of sound, for example, electric and electronic effects units for musical instruments, wah-wah pedals, audio interfaces, audio mixers, equalisers being audio apparatus, subwoofers (Cl. 9);",
+      "apparatus for the recording, transmission, amplification and reproduction of sound, for example, electric and electronic effects units for musical instruments, wah-wah pedals, audio interfaces, audio mixers, equalizers being audio apparatus, subwoofers (Cl. 9);",
       "downloadable electronic sheet music (Cl. 9), printed sheet music (Cl. 16);",
       "downloadable music files (Cl. 9);",
       "musical juke boxes (Cl. 9);",
@@ -358,11 +358,11 @@
     "note": "Class 16 includes mainly paper, cardboard and certain goods made of those materials, as well as office requisites.",
     "includes": [
       "paper knives, paper cutters;",
-      "cases, covers and devices for holding or securing paper, for example, document files, money clips, holders for cheque books, paper-clips, passport holders, scrapbooks;",
+      "cases, covers and devices for holding or securing paper, for example, document files, money clips, holders for checkbooks, paper-clips, passport holders, scrapbooks;",
       "certain office machines, for example, typewriters, duplicators, franking machines for office use, pencil sharpeners;",
-      "painting articles for use by artists and interior and exterior painters, for example, artists’ watercolour saucers, painters’ easels and palettes, paint rollers and trays;",
+      "painting articles for use by artists and interior and exterior painters, for example, artists’ watercolor saucers, painters’ easels and palettes, paint rollers and trays;",
       "certain disposable paper products, for example, bibs, handkerchiefs and table linen of paper;",
-      "certain goods made of paper or cardboard not otherwise classified by function or purpose, for example, paper bags, envelopes and containers for packaging, figurines and works of art of paper or cardboard, such as figurines of papier mâché, framed or unframed lithographs, paintings and watercolours."
+      "certain goods made of paper or cardboard not otherwise classified by function or purpose, for example, paper bags, envelopes and containers for packaging, figurines and works of art of paper or cardboard, such as figurines of papier mâché, framed or unframed lithographs, paintings and watercolors."
     ],
     "excludes": [
       "certain goods made of paper or cardboard that are classified according to their function or purpose, for example, photographic paper (Cl. 1), abrasive paper (Cl. 3), indoor window blinds of paper (Cl. 20), table plates and cups of paper (Cl. 21), bed covers of paper (Cl. 24), paper clothing (Cl. 25), cigarette paper (Cl. 34);",
@@ -376,7 +376,7 @@
     "heading": "Unprocessed and semi-processed rubber, gutta-percha, gum, asbestos, mica and substitutes for all these materials; plastics and resins in extruded form for use in manufacture; packing, stopping and insulating materials; flexible pipes, tubes and hoses, not of metal.",
     "note": "Class 17 includes mainly electrical, thermal and acoustic insulating materials and plastics for use in manufacture in the form of sheets, blocks and rods, as well as certain goods made of rubber, gutta-percha, gum, asbestos, mica or substitutes therefor.",
     "includes": [
-      "rubber material for recapping tyres;",
+      "rubber material for recapping tires;",
       "floating anti-pollution barriers;",
       "adhesive tapes, other than stationery and not for cosmetic, medical or household purposes;",
       "plastic films, other than for wrapping and packaging, for example, anti-glare films for windows;",
@@ -395,7 +395,7 @@
     "heading": "Leather and imitations of leather; animal skins and hides; luggage and carrying bags; umbrellas and parasols; walking sticks; whips, harness and saddlery; collars, leashes and clothing for animals.",
     "note": "Class 18 includes mainly leather, imitations of leather and certain goods made of those materials.",
     "includes": [
-      "luggage and carrying bags, for example, suitcases, trunks, travelling bags, sling bags for carrying infants, school bags;",
+      "luggage and carrying bags, for example, suitcases, trunks, traveling bags, sling bags for carrying infants, school bags;",
       "luggage tags;",
       "business card cases, pocket wallets;",
       "boxes and cases of leather or leatherboard;",
@@ -463,7 +463,7 @@
       "certain dispensing apparatus that are classified according to their function or purpose, for example, fluid dispensing machines for industrial use (Cl. 7), electronic ticket dispensing terminals (Cl. 9), dosage dispensers for medical use (Cl. 10), adhesive tape dispensers (Cl. 16);",
       "certain mirrors for specific uses, for example, mirrors used in optical goods (Cl. 9), mirrors used in surgery or dentistry (Cl. 10), rearview mirrors (Cl. 12), sighting mirrors for guns (Cl. 13);",
       "special furniture for laboratories (Cl. 9) or for medical use (Cl. 10);",
-      "certain goods made of wood, cork, reed, cane, wicker, horn, bone, whalebone, shell, amber, mother-of-pearl, meerschaum and substitutes for all these materials, or of plastic, that are classified according to their function or purpose, for example, beads for making jewellery (Cl. 14), wooden floor boards (Cl. 19), baskets for domestic use (Cl. 21), plastic cups (Cl. 21), reed mats (Cl. 27);",
+      "certain goods made of wood, cork, reed, cane, wicker, horn, bone, whalebone, shell, amber, mother-of-pearl, meerschaum and substitutes for all these materials, or of plastic, that are classified according to their function or purpose, for example, beads for making jewelry (Cl. 14), wooden floor boards (Cl. 19), baskets for domestic use (Cl. 21), plastic cups (Cl. 21), reed mats (Cl. 27);",
       "bed linen, eiderdowns and sleeping bags (Cl. 24)."
     ]
   },
@@ -483,7 +483,7 @@
     ],
     "excludes": [
       "cleaning preparations (Cl. 3);",
-      "certain goods made of glass, porcelain and earthenware that are classified according to their function or purpose, for example, porcelain for dental prostheses (Cl. 5), spectacle lenses (Cl. 10), glass wool for insulation, semi-processed acrylic or organic glass (Cl. 17), earthenware tiles (Cl. 19), building glass (Cl. 19), glass fibres for textile use (Cl. 22);",
+      "certain goods made of glass, porcelain and earthenware that are classified according to their function or purpose, for example, porcelain for dental prostheses (Cl. 5), spectacle lenses (Cl. 10), glass wool for insulation, semi-processed acrylic or organic glass (Cl. 17), earthenware tiles (Cl. 19), building glass (Cl. 19), glass fibers for textile use (Cl. 22);",
       "containers for storage and transport of goods, of metal (Cl. 6), not of metal (Cl. 20);",
       "small apparatus for mincing, grinding, pressing or crushing, which are driven by electricity (Cl. 7);",
       "razors and shaving apparatus, hair and nail clippers, electric and non-electric implements for manicure and pedicure, for example, manicure sets, emery boards, cuticle nippers (Cl. 8);",
@@ -498,12 +498,12 @@
     "heading": "Ropes and string; nets; tents and tarpaulins; awnings of textile or synthetic materials; sails; sacks for the transport and storage of materials in bulk; padding, cushioning and stuffing materials, except of paper, cardboard, rubber or plastics; raw fibrous textile materials and substitutes therefor.",
     "note": "Class 22 includes mainly canvas and other materials for making sails, rope, padding, cushioning and stuffing materials and raw fibrous textile materials.",
     "includes": [
-      "cords and twines made of natural or artificial textile fibres, paper or plastics;",
+      "cords and twines made of natural or artificial textile fibers, paper or plastics;",
       "commercial fishing nets, hammocks, rope ladders;",
       "vehicle covers, not fitted;",
       "certain sacks and bags not otherwise classified by function or purpose, for example, mesh bags for washing laundry, body bags, mail bags;",
       "packaging bags of textile;",
-      "animal fibres and raw textile fibres, for example, animal hair, cocoons, jute, raw or treated wool, raw silk."
+      "animal fibers and raw textile fibers, for example, animal hair, cocoons, jute, raw or treated wool, raw silk."
     ],
     "excludes": [
       "metal ropes (Cl. 6);",
@@ -518,13 +518,13 @@
     "heading": "Yarns and threads for textile use.",
     "note": "Class 23 includes mainly natural or synthetic yarns and threads for textile use.",
     "includes": [
-      "fibreglass, elastic, rubber and plastic threads for textile use;",
+      "fiberglass, elastic, rubber and plastic threads for textile use;",
       "threads for embroidery, darning and sewing, including those of metal;",
       "spun silk, spun cotton, spun wool."
     ],
     "excludes": [
-      "threads, other than for textile use, that are classified according to the material of which they are made, for example, threads for binding of metal (Cl. 6) and not of metal (Cl. 22), elastic threads, threads of rubber or plastic (Cl. 17), fibreglass threads (Cl. 21);",
-      "certain threads for specific uses, for example, identification threads for electric wires (Cl. 9), surgical thread (Cl. 10), threads of precious metal being jewellery (Cl. 14)."
+      "threads, other than for textile use, that are classified according to the material of which they are made, for example, threads for binding of metal (Cl. 6) and not of metal (Cl. 22), elastic threads, threads of rubber or plastic (Cl. 17), fiberglass threads (Cl. 21);",
+      "certain threads for specific uses, for example, identification threads for electric wires (Cl. 9), surgical thread (Cl. 10), threads of precious metal being jewelry (Cl. 14)."
     ]
   },
   {
@@ -559,7 +559,7 @@
     ],
     "excludes": [
       "small items of hardware used in shoemaking, for example, shoe pegs and shoe dowels of metal (Cl. 6) and not of metal (Cl. 20), as well as haberdashery accessories and fastenings for clothing, footwear and headwear, for example, clasps, buckles, zippers, ribbons, hatbands, hat and shoe trimmings (Cl. 26);",
-      "certain clothing, footwear and headwear for special use, for example, protective helmets, including for sports, clothing for protection against fire (Cl. 9), clothing especially for operating rooms, orthopaedic footwear (Cl. 10), as well as clothing and footwear that are essential for the practice of certain sports, for example, baseball gloves, boxing gloves, ice skates (Cl. 28);",
+      "certain clothing, footwear and headwear for special use, for example, protective helmets, including for sports, clothing for protection against fire (Cl. 9), clothing especially for operating rooms, orthopedic footwear (Cl. 10), as well as clothing and footwear that are essential for the practice of certain sports, for example, baseball gloves, boxing gloves, ice skates (Cl. 28);",
       "fitted footmuffs for pushchairs and prams (Cl. 12);",
       "bibs of paper (Cl. 16);",
       "handkerchiefs of paper (Cl. 16) and of textile (Cl. 24);",
@@ -580,7 +580,7 @@
       "ribbons and bows for gift wrapping, not of paper;",
       "hair nets;",
       "buckles, zippers;",
-      "charms, other than for jewellery, key rings or key chains;",
+      "charms, other than for jewelry, key rings or key chains;",
       "artificial garlands and wreaths, including those incorporating lights;",
       "certain articles for curling hair, for example, electric and non-electric hair curlers, other than hand implements, hair curling pins, hair curling paper."
     ],
@@ -590,7 +590,7 @@
       "certain special types of needles, for example, tattoo needles (Cl. 8), needles for surveying compasses (Cl. 9), needles for medical purposes (Cl. 10), needles for pumps for inflating balls for games (Cl. 28);",
       "hand implements for curling hair, for example, curling tongs, eyelash curlers (Cl. 8);",
       "hair prostheses (Cl. 10);",
-      "jewellery charms, charms for key rings or key chains (Cl. 14);",
+      "jewelry charms, charms for key rings or key chains (Cl. 14);",
       "certain ribbons and bows, for example, paper ribbons and bows, other than haberdashery or hair decorations (Cl. 16), rhythmic gymnastics ribbons (Cl. 28);",
       "yarns and threads for textile use (Cl. 23);",
       "Christmas trees of synthetic material (Cl. 28)."
@@ -643,7 +643,7 @@
       "milk substitutes, for example, almond milk, coconut milk, peanut milk, rice milk, soya milk;",
       "preserved mushrooms;",
       "pulses and nuts prepared for human consumption;",
-      "seeds prepared for human consumption, not being seasonings or flavourings."
+      "seeds prepared for human consumption, not being seasonings or flavorings."
     ],
     "excludes": [
       "animal extracts for the food industry (Cl. 1);",
@@ -663,13 +663,13 @@
   {
     "number": 30,
     "heading": "Coffee, tea, cocoa and substitutes therefor; rice, pasta and noodles; tapioca and sago; flour and preparations made from cereals; bread, pastries and confectionery; chocolate; ice cream, sorbets and other edible ices; sugar, honey, treacle; yeast, baking-powder; salt, seasonings, spices, preserved herbs; vinegar, sauces and other condiments; ice (frozen water).",
-    "note": "Class 30 includes mainly foodstuffs of plant origin, except fruits and vegetables, prepared or preserved for consumption, as well as auxiliaries intended for the improvement of the flavour of food.",
+    "note": "Class 30 includes mainly foodstuffs of plant origin, except fruits and vegetables, prepared or preserved for consumption, as well as auxiliaries intended for the improvement of the flavor of food.",
     "includes": [
       "beverages with coffee, cocoa, chocolate or tea base;",
       "cereals prepared for human consumption, for example, oat flakes, corn chips, husked barley, bulgur, muesli;",
       "pizza, pies, sandwiches;",
       "chocolate-coated nuts;",
-      "flavourings for food or beverages."
+      "flavorings for food or beverages."
     ],
     "excludes": [
       "salt for industrial purposes (Cl. 1);",
@@ -677,7 +677,7 @@
       "dietary supplements (Cl. 5);",
       "medicinal teas and dietetic food and substances adapted for medical use (Cl. 5);",
       "yeast for pharmaceutical purposes (Cl. 5), yeast for animal consumption (Cl. 31);",
-      "milk beverages flavoured with coffee, cocoa, chocolate or tea (Cl. 29);",
+      "milk beverages flavored with coffee, cocoa, chocolate or tea (Cl. 29);",
       "soups, bouillon (Cl. 29);",
       "fresh herbs (Cl. 31);",
       "foodstuffs for animals (Cl. 31);",
@@ -694,7 +694,7 @@
       "plant residue;",
       "unprocessed algae;",
       "unsawn timber;",
-      "fertilised eggs for hatching;",
+      "fertilized eggs for hatching;",
       "fresh mushrooms and truffles;",
       "litter for animals, for example, aromatic sand, sanded paper for pets."
     ],
@@ -711,7 +711,7 @@
     "heading": "Beers; non-alcoholic beverages; mineral and aerated waters; fruit beverages and fruit juices; syrups and other preparations for making non-alcoholic beverages.",
     "note": "Class 32 includes mainly non-alcoholic beverages, as well as beer.",
     "includes": [
-      "de-alcoholised beverages;",
+      "de-alcoholized beverages;",
       "soft drinks;",
       "rice-based and soya-based beverages, other than milk substitutes;",
       "energy drinks, isotonic beverages, protein-enriched sports beverages;",
@@ -723,7 +723,7 @@
       "milk beverages with milk predominating, milk shakes (Cl. 29);",
       "milk substitutes, for example, almond milk, coconut milk, peanut milk, rice milk, soya milk (Cl. 29);",
       "beverages with coffee, cocoa, chocolate or tea base (Cl. 30);",
-      "flavourings for beverages (Cl. 30);",
+      "flavorings for beverages (Cl. 30);",
       "beverages for pets (Cl. 31);",
       "alcoholic beverages, except beer (Cl. 33)."
     ]
@@ -741,7 +741,7 @@
     "excludes": [
       "medicinal beverages (Cl. 5);",
       "beers (Cl. 32);",
-      "de-alcoholised beverages (Cl. 32);",
+      "de-alcoholized beverages (Cl. 32);",
       "non-alcoholic mixers used to make alcoholic beverages, for example, soft drinks, soda water (Cl. 32)."
     ]
   },
@@ -751,7 +751,7 @@
     "note": "Class 34 includes mainly tobacco and articles used for smoking, as well as certain accessories and containers related to their use.",
     "includes": [
       "tobacco substitutes, not for medical purposes;",
-      "flavourings for use in electronic cigarettes or oral vaporizers for smokers;",
+      "flavorings for use in electronic cigarettes or oral vaporizers for smokers;",
       "herbs for smoking;",
       "snuff;",
       "certain accessories and containers related to the use of tobacco and articles for smoking, for example, lighters for smokers, ashtrays for smokers, tobacco jars, snuff boxes, cigar humidors."
@@ -767,11 +767,11 @@
     "heading": "Advertising; business management, organization and administration; office functions.",
     "note": "Class 35 includes mainly services involving business management, operation, organization and administration of a commercial or industrial enterprise, as well as advertising, marketing and promotional services. For the purposes of classification, the sale of goods is not considered to be a service.",
     "includes": [
-      "the bringing together, for the benefit of others, of a variety of goods, excluding the transport thereof, enabling customers to conveniently view and purchase those goods; such services may be provided by retail stores, wholesale outlets, through vending machines, mail order catalogues or by means of electronic media, for example, through websites or television shopping programmes;",
+      "the bringing together, for the benefit of others, of a variety of goods, excluding the transport thereof, enabling customers to conveniently view and purchase those goods; such services may be provided by retail stores, wholesale outlets, through vending machines, mail order catalogs or by means of electronic media, for example, through websites or television shopping programs;",
       "advertising, marketing and promotional services, for example, distribution of samples, development of advertising concepts, writing and publication of publicity texts;",
       "shop window dressing;",
       "public relations services;",
-      "production of teleshopping programmes;",
+      "production of teleshopping programs;",
       "organization of trade fairs and exhibitions for commercial or advertising purposes;",
       "search engine optimization for sales promotion;",
       "commercial assistance services, for example, personnel recruitment, negotiation of business contracts for others, cost price analysis, import-export agency services;",
@@ -788,7 +788,7 @@
       "energy auditing (Cl. 42);",
       "graphic design of promotional materials (Cl. 42);",
       "legal services in relation to the negotiation of contracts for others (Cl. 45);",
-      "licensing of intellectual property, legal administration of licences, copyright management (Cl. 45);",
+      "licensing of intellectual property, legal administration of licenses, copyright management (Cl. 45);",
       "registration of domain names (Cl. 45)."
     ]
   },
@@ -797,10 +797,10 @@
     "heading": "Financial, monetary and banking services; insurance services; real estate services.",
     "note": "Class 36 includes mainly services relating to banking and other financial transactions, financial valuation services, as well as insurance and real estate activities.",
     "includes": [
-      "financial transaction and payment services, for example, exchanging money, electronic funds transfer, processing of credit card and debit card payments, issuance of travellers’ cheques;",
+      "financial transaction and payment services, for example, exchanging money, electronic funds transfer, processing of credit card and debit card payments, issuance of travelers’ checks;",
       "financial management and research;",
-      "financial appraisals, for example, jewellery, art and real estate appraisal, repair costs evaluation;",
-      "cheque verification;",
+      "financial appraisals, for example, jewelry, art and real estate appraisal, repair costs evaluation;",
+      "check verification;",
       "financing and credit services, for example, loans, issuance of credit cards, hire- or lease-purchase financing;",
       "crowdfunding;",
       "safe deposit services;",
@@ -851,11 +851,11 @@
       "teleconferencing and videoconferencing services."
     ],
     "excludes": [
-      "content or subject matter that may be contained in the communication activity, for example, downloadable image files (Cl. 9), providing business information via a website (Cl. 35), providing films and television programmes, not downloadable, via video-on-demand services (Cl. 41);",
+      "content or subject matter that may be contained in the communication activity, for example, downloadable image files (Cl. 9), providing business information via a website (Cl. 35), providing films and television programs, not downloadable, via video-on-demand services (Cl. 41);",
       "online advertising on a computer network, radio advertising, television advertising (Cl. 35);",
       "services conducted using telecommunication connections, for example, online retail services for downloadable digital music (Cl. 35), online banking (Cl. 36);",
       "telemarketing services (Cl. 35);",
-      "production of radio and television programmes (Cl. 41);",
+      "production of radio and television programs (Cl. 41);",
       "telecommunications technology consultancy (Cl. 42);",
       "online social networking services (Cl. 45)."
     ]
@@ -887,7 +887,7 @@
   {
     "number": 40,
     "heading": "Treatment of materials; recycling of waste and trash; air purification and treatment of water; printing services; food and drink preservation.",
-    "note": "Class 40 includes mainly services rendered by the mechanical or chemical processing, transformation or production of objects or inorganic or organic substances, including custom manufacturing services. For the purposes of classification, the production or manufacturing of goods is considered a service only in cases where it is effected for the account of another person to their order and specification. If the production or manufacturing is not being performed to fulfil an order for goods which meet the customer’s particular needs, requirements, or specifications, then it is generally ancillary to the maker’s primary commercial activity or goods in trade. If the substance or object is marketed to third parties by the person who processed, transformed or produced it, then this would generally not be considered a service.",
+    "note": "Class 40 includes mainly services rendered by the mechanical or chemical processing, transformation or production of objects or inorganic or organic substances, including custom manufacturing services. For the purposes of classification, the production or manufacturing of goods is considered a service only in cases where it is effected for the account of another person to their order and specification. If the production or manufacturing is not being performed to fulfill an order for goods which meet the customer’s particular needs, requirements, or specifications, then it is generally ancillary to the maker’s primary commercial activity or goods in trade. If the substance or object is marketed to third parties by the person who processed, transformed or produced it, then this would generally not be considered a service.",
     "includes": [
       "transformation of an object or substance and any process involving a change in its essential properties, for example, dyeing a garment; such transformation services are also classified in Class 40 if they are provided in the framework of repair or maintenance work, for example, chromium plating of motor vehicle bumpers;",
       "services of material treatment which may be present during the production of any substance or object other than a building, for example, services which involve cutting, shaping, polishing by abrasion or metal coating;",
@@ -1045,8 +1045,8 @@
     ],
     "excludes": [
       "certain rental services rendered by others to meet the needs of individuals, where the services provided by means of the rented objects belong to another class, for example, rental of apartments (Cl. 36), car rental (Cl. 39), rental of temporary accommodation (Cl. 43);",
-      "escorting of travellers (Cl. 39);",
-      "secure transport, for example, guarded transport of valuables, armoured car transport (Cl. 39);",
+      "escorting of travelers (Cl. 39);",
+      "secure transport, for example, guarded transport of valuables, armored car transport (Cl. 39);",
       "party planning (Cl. 41);",
       "services consisting of all forms of education, including religious education (Cl. 41);",
       "services having the basic aim of the entertainment, amusement or recreation of people (Cl. 41);",

@@ -31,7 +31,17 @@ type NiceClass = {
 };
 
 const niceClasses = classesJson as NiceClass[];
-function Icon({ path, className }: { path: string; className?: string }) {
+function Icon({
+  path,
+  overlay,
+  fillRule,
+  className,
+}: {
+  path: string;
+  overlay?: string;
+  fillRule?: "evenodd";
+  className?: string;
+}) {
   return (
     <svg
       aria-hidden="true"
@@ -39,7 +49,8 @@ function Icon({ path, className }: { path: string; className?: string }) {
       viewBox="0 0 24 24"
       focusable="false"
     >
-      <path d={path} />
+      <path d={path} fillRule={fillRule} clipRule={fillRule} />
+      {overlay && <path d={overlay} />}
     </svg>
   );
 }
@@ -225,7 +236,12 @@ export default function NiceExplorer() {
               <span className="class-number">
                 {String(entry.number).padStart(2, "0")}
               </span>
-              <Icon path={meta.icon} className="class-icon" />
+              <Icon
+                path={meta.icon}
+                overlay={meta.iconOverlay}
+                fillRule={meta.fillRule}
+                className="class-icon"
+              />
               <span
                 className="class-name"
                 data-compact={meta.shortName.length > 22 || undefined}
@@ -310,7 +326,12 @@ export default function NiceExplorer() {
         {selectedClass && selectedMeta && (
           <>
             <div className="detail-header">
-              <Icon path={selectedMeta.icon} className="detail-icon" />
+              <Icon
+                path={selectedMeta.icon}
+                overlay={selectedMeta.iconOverlay}
+                fillRule={selectedMeta.fillRule}
+                className="detail-icon"
+              />
               <div className="detail-heading">
                 <span className="detail-kicker">
                   Class {selectedClass.number} · {selectedClass.number <= 34 ? "Goods" : "Services"}

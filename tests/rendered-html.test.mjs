@@ -60,3 +60,14 @@ test("official data is complete and sequential", async () => {
     assert.ok(entry.excludes.length > 0);
   }
 });
+
+test("classification copy uses US spelling", async () => {
+  const classes = await readFile(
+    new URL("../app/data/classes.json", import.meta.url),
+    "utf8",
+  );
+  const britishSpellings =
+    /\b(?:alcoholised|analogue|armoured|catalogues?|cheques?|defence|equalisers?|fertilised|fibreglass|fibres?|flavour(?:ed|ings?)?|fulfil|jewellery|licences?|orthopaedic|ploughs?|programmes?|signalling|travellers?|travelling|tyres?|watercolours?)\b/i;
+
+  assert.doesNotMatch(classes, britishSpellings);
+});
