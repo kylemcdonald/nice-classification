@@ -35,11 +35,13 @@ function Icon({
   path,
   overlay,
   fillRule,
+  strokeWidth,
   className,
 }: {
   path: string;
   overlay?: string;
   fillRule?: "evenodd";
+  strokeWidth?: number;
   className?: string;
 }) {
   return (
@@ -49,7 +51,16 @@ function Icon({
       viewBox="0 0 24 24"
       focusable="false"
     >
-      <path d={path} fillRule={fillRule} clipRule={fillRule} />
+      <path
+        d={path}
+        fill={strokeWidth ? "none" : undefined}
+        stroke={strokeWidth ? "var(--accent)" : undefined}
+        strokeWidth={strokeWidth}
+        strokeLinecap={strokeWidth ? "round" : undefined}
+        strokeLinejoin={strokeWidth ? "round" : undefined}
+        fillRule={fillRule}
+        clipRule={fillRule}
+      />
       {overlay && <path d={overlay} />}
     </svg>
   );
@@ -240,6 +251,7 @@ export default function NiceExplorer() {
                 path={meta.icon}
                 overlay={meta.iconOverlay}
                 fillRule={meta.fillRule}
+                strokeWidth={meta.strokeWidth}
                 className="class-icon"
               />
               <span
@@ -330,6 +342,7 @@ export default function NiceExplorer() {
                 path={selectedMeta.icon}
                 overlay={selectedMeta.iconOverlay}
                 fillRule={selectedMeta.fillRule}
+                strokeWidth={selectedMeta.strokeWidth}
                 className="detail-icon"
               />
               <div className="detail-heading">

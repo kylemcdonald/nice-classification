@@ -2,7 +2,7 @@ import {
   mdiAntenna,
   mdiAnvil,
   mdiBank,
-  mdiBook,
+  mdiBookOpenBlankVariant,
   mdiBottleSodaClassic,
   mdiBottleWine,
   mdiBreadSlice,
@@ -41,12 +41,20 @@ import {
   mdiWall,
 } from "@mdi/js";
 
-// These compact stamp silhouettes cover objects that Material Design Icons
+// These compact stamp marks cover objects that Material Design Icons
 // does not represent plainly enough at the overview's small display size.
+// Adapted from Hugeicons' MIT-licensed yoga-mat icon. The heavy, rounded
+// stroke keeps the coil and loose end legible at the compact overview size.
 const mdiRubberRoll =
-  "M4 5.5H16.5A6.5 6.5 0 1 1 16.5 18.5H4A2 2 0 0 1 2 16.5V7.5A2 2 0 0 1 4 5.5Z" +
-  "M16.5 8A4 4 0 1 0 16.5 16A4 4 0 0 0 16.5 8Z" +
-  "M16.5 10.5A1.5 1.5 0 1 1 16.5 13.5A1.5 1.5 0 0 1 16.5 10.5Z";
+  "M10.505 15.01L17.14 10.5Q17.422 10.289 17.636 10.012" +
+  "C18.122 9.382 18.112 8.507 17.804 7.775A4.55 4.55 0 0 0 13.6 5" +
+  "C12.664 5 11.795 5.28 11.072 5.758L3.992 10.757" +
+  "M5.995 13.507C5.995 14.203 6.364 15.586 8.035 15.966" +
+  "C9.042 16.194 11.973 15.231 10.539 12.439S5.652 9.632 4.247 10.568" +
+  "C3.388 11.088 1.721 12.716 2.037 14.88C2.15 16.19 3.182 18.85 6.412 19.002" +
+  "H16.304C17.226 18.929 17.416 18.795 18.118 18.256" +
+  "C19.063 17.408 20.64 15.848 21.557 14.822" +
+  "C21.755 14.6 21.968 14.372 21.996 14.076C22.141 12.499 19.749 13.182 18.016 12.994";
 
 const mdiComb =
   "M4 3H20A2 2 0 0 1 22 5V8H4A2 2 0 0 1 2 6V5A2 2 0 0 1 4 3Z" +
@@ -57,9 +65,13 @@ const mdiComb =
   "M20 8H22V12A1 1 0 0 1 20 12V8Z";
 
 const mdiThreadSpool =
-  "M5 3H19A2 2 0 0 1 19 7H17L16 9V11H22V13H16V15L17 17H19" +
-  "A2 2 0 0 1 19 21H5A2 2 0 0 1 5 17H7L8 15V9L7 7H5A2 2 0 0 1 5 3Z" +
-  "M8 10H16V11H8ZM8 13H16V14H8Z";
+  "M4 3H20A2 2 0 0 1 20 7H4A2 2 0 0 1 4 3Z" +
+  "M7.2 7.5H16.8V8.8H7.2Z" +
+  "M7.5 9.2H16.5V10.5H7.5Z" +
+  "M7.5 10.9H21.5V12.2H7.5Z" +
+  "M7.5 12.6H16.5V13.9H7.5Z" +
+  "M7.2 14.3H16.8V15.6H7.2Z" +
+  "M4 16H20A2 2 0 0 1 20 20H4A2 2 0 0 1 4 16Z";
 
 const mdiPillow =
   "M5.3 3.6C9 5 15 5 18.7 3.6C20.4 5.5 20.4 8 20 12" +
@@ -102,6 +114,7 @@ export type ClassMeta = {
   icon: string;
   iconOverlay?: string;
   fillRule?: "evenodd";
+  strokeWidth?: number;
   group: GroupName;
 };
 
@@ -121,14 +134,14 @@ export const classMeta: ClassMeta[] = [
   { shortName: "Firearms", icon: mdiPistol, group: "technology" },
   { shortName: "Jewelry", icon: mdiDiamondStone, group: "culture" },
   { shortName: "Musical instruments", icon: mdiGuitarAcoustic, group: "culture" },
-  { shortName: "Paper goods", icon: mdiBook, group: "culture" },
-  { shortName: "Rubber & plastics", icon: mdiRubberRoll, fillRule: "evenodd", group: "materials" },
+  { shortName: "Paper goods", icon: mdiBookOpenBlankVariant, group: "culture" },
+  { shortName: "Rubber & plastics", icon: mdiRubberRoll, strokeWidth: 3.2, group: "materials" },
   { shortName: "Leather goods", icon: mdiPurse, group: "materials" },
   { shortName: "Building materials", icon: mdiWall, group: "materials" },
   { shortName: "Furniture", icon: mdiSofa, group: "materials" },
   { shortName: "Housewares", icon: mdiComb, group: "materials" },
   { shortName: "Ropes & fibers", icon: mdiLasso, group: "materials" },
-  { shortName: "Yarns & threads", icon: mdiThreadSpool, fillRule: "evenodd", group: "materials" },
+  { shortName: "Yarns & threads", icon: mdiThreadSpool, group: "materials" },
   { shortName: "Textiles", icon: mdiPillow, fillRule: "evenodd", group: "materials" },
   { shortName: "Clothing", icon: mdiTshirtCrew, group: "lifestyle" },
   { shortName: "Trims & fasteners", icon: mdiSewOnButton, group: "lifestyle" },

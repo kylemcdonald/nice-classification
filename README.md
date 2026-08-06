@@ -6,7 +6,7 @@ A fast, single-page guide to all 45 Nice classes for trademark goods and service
 
 ## Features
 
-- 45 compact, color-grouped class cards with solid silhouette icons
+- 45 compact, color-grouped class cards with single-color stamp icons
 - Clear separation between goods (Classes 1–34) and services (Classes 35–45)
 - Instant relevance-ranked full-text search without changing class order
 - Quick side sheet on desktop and bottom sheet on mobile
@@ -50,4 +50,4 @@ Pushes to `main` build the static site and deploy it through GitHub Actions to G
 
 ## Credits and license
 
-Interface code is available under the [MIT License](LICENSE). Icons are from [Material Design Icons](https://pictogrammers.com/library/mdi/) and are distributed under Apache 2.0.
+Interface code is available under the [MIT License](LICENSE). Icons are from [Material Design Icons](https://pictogrammers.com/library/mdi/) under Apache 2.0; the Class 17 roll is adapted from [Hugeicons](https://hugeicons.com/) under MIT.
