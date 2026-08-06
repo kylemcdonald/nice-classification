@@ -226,7 +226,12 @@ export default function NiceExplorer() {
                 {String(entry.number).padStart(2, "0")}
               </span>
               <Icon path={meta.icon} className="class-icon" />
-              <span className="class-name">{meta.shortName}</span>
+              <span
+                className="class-name"
+                data-compact={meta.shortName.length > 22 || undefined}
+              >
+                {meta.shortName}
+              </span>
             </button>
           );
         })}

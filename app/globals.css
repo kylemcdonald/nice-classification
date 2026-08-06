@@ -318,8 +318,10 @@ a {
 }
 
 .class-icon {
+  display: block;
   width: min(57%, 58px);
-  height: min(57%, 58px);
+  height: auto;
+  aspect-ratio: 1;
   align-self: center;
   justify-self: center;
   fill: var(--accent);
@@ -329,8 +331,8 @@ a {
 
 .class-name {
   width: 100%;
-  overflow-wrap: anywhere;
-  font-size: clamp(0.66rem, 1vw, 0.8rem);
+  overflow-wrap: break-word;
+  font-size: clamp(0.66rem, 0.9vw, 0.8rem);
   font-weight: 750;
   letter-spacing: -0.018em;
   line-height: 1.05;
@@ -651,6 +653,10 @@ a {
 
   .class-card {
     aspect-ratio: 1.06;
+  }
+
+  .class-name[data-compact] {
+    font-size: clamp(0.66rem, 0.84vw, 0.77rem);
   }
 }
 

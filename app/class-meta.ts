@@ -81,7 +81,7 @@ export const classMeta: ClassMeta[] = [
   { shortName: "Paints", icon: mdiPalette, group: "science" },
   { shortName: "Cosmetics & cleaning", icon: mdiSprayBottle, group: "science" },
   { shortName: "Oils & fuels", icon: mdiGasStation, group: "science" },
-  { shortName: "Pharmaceuticals", icon: mdiPill, group: "science" },
+  { shortName: "Pharma", icon: mdiPill, group: "science" },
   { shortName: "Metal goods", icon: mdiAnvil, group: "technology" },
   { shortName: "Machinery", icon: mdiCog, group: "technology" },
   { shortName: "Hand tools", icon: mdiHammerWrench, group: "technology" },
