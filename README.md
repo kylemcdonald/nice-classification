@@ -6,13 +6,17 @@ A fast, single-page guide to all 45 Nice classes for trademark goods and service
 
 ## Features
 
-- 45 compact, color-grouped class cards with single-color stamp icons
+- 45 compact, color-grouped class cards with GPT Image 2-generated stamp illustrations
 - Clear separation between goods (Classes 1–34) and services (Classes 35–45)
 - Instant relevance-ranked full-text search without changing class order
 - Quick side sheet on desktop and bottom sheet on mobile
 - Official headings, explanatory scope, positive examples, and collapsed exclusions
 - Keyboard support: `/` focuses search, Enter opens the best match, and Escape closes details
-- No external fonts, image requests, analytics, or runtime API calls
+- No external fonts, analytics, or runtime API calls; all images are local assets
+
+## Class images
+
+Each class illustration was generated independently with OpenAI’s [`gpt-image-2`](https://developers.openai.com/api/docs/guides/image-generation) at medium quality and 1024×1024 pixels. The prompt supplies the official class heading and asks the model to choose a clear visual metaphor instead of prescribing specific objects. Full-resolution source PNGs and the prompt manifest are in `output/imagegen/nice-class-icons`; lightweight transparent versions used by the site are in `public/class-icons`.
 
 ## Data
 
@@ -50,4 +54,4 @@ Pushes to `main` build the static site and deploy it through GitHub Actions to G
 
 ## Credits and license
 
-Interface code is available under the [MIT License](LICENSE). Icons are from [Material Design Icons](https://pictogrammers.com/library/mdi/) under Apache 2.0; the Class 17 roll is adapted from [Hugeicons](https://hugeicons.com/) under MIT.
+Interface code is available under the [MIT License](LICENSE). The class illustrations were generated with OpenAI’s `gpt-image-2`. Interface-control icons are from [Material Design Icons](https://pictogrammers.com/library/mdi/) under Apache 2.0.

@@ -26,3 +26,21 @@ test("responsive and reduced-motion rules ship with the page", async () => {
   assert.match(css, /(?:max-width:700px|width<=700px)/);
   assert.match(css, /prefers-reduced-motion:reduce/);
 });
+
+test("all generated class images ship as compact local assets", async () => {
+  const iconRoot = new URL("class-icons/", pagesRoot);
+  const icons = (await readdir(iconRoot)).filter((name) => name.endsWith(".png")).sort();
+  assert.deepEqual(
+    icons,
+    Array.from({ length: 45 }, (_, index) =>
+      `class-${String(index + 1).padStart(2, "0")}.png`,
+    ),
+  );
+
+  for (const icon of icons) {
+    const image = await readFile(new URL(icon, iconRoot));
+    assert.equal(image.readUInt32BE(16), 256);
+    assert.equal(image.readUInt32BE(20), 256);
+    assert.ok(image.byteLength < 60_000);
+  }
+});

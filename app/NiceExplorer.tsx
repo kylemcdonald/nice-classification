@@ -33,15 +33,9 @@ type NiceClass = {
 const niceClasses = classesJson as NiceClass[];
 function Icon({
   path,
-  overlay,
-  fillRule,
-  strokeWidth,
   className,
 }: {
   path: string;
-  overlay?: string;
-  fillRule?: "evenodd";
-  strokeWidth?: number;
   className?: string;
 }) {
   return (
@@ -51,18 +45,25 @@ function Icon({
       viewBox="0 0 24 24"
       focusable="false"
     >
-      <path
-        d={path}
-        fill={strokeWidth ? "none" : undefined}
-        stroke={strokeWidth ? "var(--accent)" : undefined}
-        strokeWidth={strokeWidth}
-        strokeLinecap={strokeWidth ? "round" : undefined}
-        strokeLinejoin={strokeWidth ? "round" : undefined}
-        fillRule={fillRule}
-        clipRule={fillRule}
-      />
-      {overlay && <path d={overlay} />}
+      <path d={path} />
     </svg>
+  );
+}
+
+function ClassImage({ src, className }: { src: string; className: string }) {
+  return (
+    // These local PNGs are already cropped and optimized for their exact UI size.
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      aria-hidden="true"
+      className={className}
+      src={src}
+      alt=""
+      width="256"
+      height="256"
+      decoding="async"
+      draggable="false"
+    />
   );
 }
 
@@ -247,13 +248,7 @@ export default function NiceExplorer() {
               <span className="class-number">
                 {String(entry.number).padStart(2, "0")}
               </span>
-              <Icon
-                path={meta.icon}
-                overlay={meta.iconOverlay}
-                fillRule={meta.fillRule}
-                strokeWidth={meta.strokeWidth}
-                className="class-icon"
-              />
+              <ClassImage src={meta.image} className="class-icon" />
               <span
                 className="class-name"
                 data-compact={meta.shortName.length > 22 || undefined}
@@ -338,13 +333,7 @@ export default function NiceExplorer() {
         {selectedClass && selectedMeta && (
           <>
             <div className="detail-header">
-              <Icon
-                path={selectedMeta.icon}
-                overlay={selectedMeta.iconOverlay}
-                fillRule={selectedMeta.fillRule}
-                strokeWidth={selectedMeta.strokeWidth}
-                className="detail-icon"
-              />
+              <ClassImage src={selectedMeta.image} className="detail-icon" />
               <div className="detail-heading">
                 <span className="detail-kicker">
                   Class {selectedClass.number} · {selectedClass.number <= 34 ? "Goods" : "Services"}
