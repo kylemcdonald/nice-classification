@@ -27,20 +27,23 @@ test("responsive and reduced-motion rules ship with the page", async () => {
   assert.match(css, /prefers-reduced-motion:reduce/);
 });
 
-test("all generated class images ship as compact local assets", async () => {
-  const iconRoot = new URL("class-icons/", pagesRoot);
-  const icons = (await readdir(iconRoot)).filter((name) => name.endsWith(".png")).sort();
-  assert.deepEqual(
-    icons,
-    Array.from({ length: 45 }, (_, index) =>
-      `class-${String(index + 1).padStart(2, "0")}.png`,
-    ),
+test("both generated class image sets ship as compact local assets", async () => {
+  const expected = Array.from({ length: 45 }, (_, index) =>
+    `class-${String(index + 1).padStart(2, "0")}.png`,
   );
 
-  for (const icon of icons) {
-    const image = await readFile(new URL(icon, iconRoot));
-    assert.equal(image.readUInt32BE(16), 256);
-    assert.equal(image.readUInt32BE(20), 256);
-    assert.ok(image.byteLength < 60_000);
+  for (const directory of ["class-icons", "class-icons-single"]) {
+    const iconRoot = new URL(`${directory}/`, pagesRoot);
+    const icons = (await readdir(iconRoot))
+      .filter((name) => name.endsWith(".png"))
+      .sort();
+    assert.deepEqual(icons, expected);
+
+    for (const icon of icons) {
+      const image = await readFile(new URL(icon, iconRoot));
+      assert.equal(image.readUInt32BE(16), 256);
+      assert.equal(image.readUInt32BE(20), 256);
+      assert.ok(image.byteLength < 60_000);
+    }
   }
 });

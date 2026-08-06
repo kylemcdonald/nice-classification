@@ -27,7 +27,8 @@ body {
 }
 
 button,
-input {
+input,
+select {
   color: inherit;
   font: inherit;
 }
@@ -65,7 +66,7 @@ a {
   z-index: 20;
   top: 0;
   display: grid;
-  grid-template-columns: minmax(max-content, 0.72fr) minmax(320px, 1.28fr);
+  grid-template-columns: max-content minmax(0, 1fr);
   gap: 24px;
   align-items: center;
   min-height: 62px;
@@ -73,6 +74,43 @@ a {
   background: color-mix(in srgb, var(--paper) 94%, transparent);
   border-bottom: 1px solid var(--ink);
   backdrop-filter: blur(10px);
+}
+
+.topbar-tools {
+  display: grid;
+  grid-template-columns: minmax(158px, 180px) minmax(280px, 680px);
+  gap: 10px;
+  justify-content: end;
+  justify-self: stretch;
+}
+
+.icon-set-control {
+  position: relative;
+  display: block;
+  min-width: 0;
+}
+
+.icon-set-control select {
+  width: 100%;
+  height: 44px;
+  padding: 0 10px;
+  background: var(--paper);
+  border: 1px solid #8a8a86;
+  border-radius: 13px;
+  outline: 0;
+  font-size: 0.78rem;
+  font-weight: 750;
+  cursor: pointer;
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.icon-set-control select:hover {
+  border-color: var(--ink);
+}
+
+.icon-set-control select:focus-visible {
+  border-color: var(--ink);
+  box-shadow: 0 0 0 2px var(--ink);
 }
 
 .site-title {
@@ -101,8 +139,7 @@ a {
   position: relative;
   display: flex;
   align-items: center;
-  justify-self: end;
-  width: min(100%, 680px);
+  width: 100%;
   height: 44px;
   overflow: hidden;
   background: var(--paper);
@@ -252,7 +289,7 @@ a {
   position: relative;
   display: grid;
   min-width: 0;
-  aspect-ratio: 0.96;
+  aspect-ratio: 0.9;
   grid-template-rows: auto 1fr auto;
   align-items: center;
   padding: 7px 7px 9px;
@@ -319,13 +356,19 @@ a {
 
 .class-icon {
   display: block;
-  width: min(66%, 68px);
+  width: min(74%, 76px);
   height: auto;
   aspect-ratio: 1;
   align-self: center;
+  fill: var(--accent);
   justify-self: center;
-  object-fit: contain;
-  opacity: 0.9;
+  opacity: 0.92;
+}
+
+.raster-icon {
+  background-color: var(--accent);
+  -webkit-mask: var(--icon-image) center / contain no-repeat;
+  mask: var(--icon-image) center / contain no-repeat;
 }
 
 .class-name {
@@ -398,13 +441,22 @@ a {
 }
 
 .detail-icon {
+  display: grid;
   width: 54px;
   height: 54px;
+  place-items: center;
   padding: 10px;
-  object-fit: contain;
   background: color-mix(in srgb, var(--accent) 8%, var(--paper));
   border: 1px solid color-mix(in srgb, var(--accent) 32%, #d9d9d5);
   border-radius: 13px;
+}
+
+.detail-icon-mark {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: var(--accent);
+  opacity: 0.92;
 }
 
 .detail-heading {
@@ -621,7 +673,7 @@ a {
   }
 
   .class-card {
-    aspect-ratio: 1.02;
+    aspect-ratio: 0.96;
   }
 }
 
@@ -631,7 +683,7 @@ a {
   }
 
   .class-card {
-    aspect-ratio: 1.03;
+    aspect-ratio: 0.97;
   }
 }
 
@@ -641,7 +693,7 @@ a {
   }
 
   .class-card {
-    aspect-ratio: 0.98;
+    aspect-ratio: 0.93;
   }
 }
 
@@ -651,7 +703,7 @@ a {
   }
 
   .class-card {
-    aspect-ratio: 0.96;
+    aspect-ratio: 0.91;
   }
 
   .class-name[data-compact] {
@@ -669,6 +721,12 @@ a {
     gap: 10px;
     min-height: 98px;
     padding: 9px 0 10px;
+  }
+
+  .topbar-tools {
+    grid-template-columns: minmax(152px, 0.76fr) minmax(0, 1fr);
+    gap: 8px;
+    justify-content: stretch;
   }
 
   .site-title {
@@ -765,6 +823,14 @@ a {
 }
 
 @media (max-width: 370px) {
+  .topbar {
+    min-height: 146px;
+  }
+
+  .topbar-tools {
+    grid-template-columns: 1fr;
+  }
+
   .class-grid {
     gap: 6px;
   }
@@ -815,12 +881,17 @@ a {
   }
 
   .class-icon,
+  .detail-icon-mark,
   .search-icon {
     fill: CanvasText;
   }
 
   .class-icon,
-  .detail-icon {
+  .detail-icon-mark {
     opacity: 1;
+  }
+
+  .raster-icon {
+    background-color: CanvasText;
   }
 }

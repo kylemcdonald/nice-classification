@@ -16,7 +16,7 @@ import {
   mdiMagnify,
 } from "@mdi/js";
 import classesJson from "./data/classes.json";
-import { classMeta, groupAccents } from "./class-meta";
+import { classMeta, groupAccents, type ClassMeta } from "./class-meta";
 import { normalizeSearchText, scoreNiceClass } from "./search";
 
 const SOURCE_URL =
@@ -30,12 +30,20 @@ type NiceClass = {
   excludes: string[];
 };
 
+type IconSet = "single" | "generated" | "svg";
+
 const niceClasses = classesJson as NiceClass[];
 function Icon({
   path,
+  overlay,
+  fillRule,
+  strokeWidth,
   className,
 }: {
   path: string;
+  overlay?: string;
+  fillRule?: "evenodd";
+  strokeWidth?: number;
   className?: string;
 }) {
   return (
@@ -45,24 +53,52 @@ function Icon({
       viewBox="0 0 24 24"
       focusable="false"
     >
-      <path d={path} />
+      <path
+        d={path}
+        fill={strokeWidth ? "none" : undefined}
+        stroke={strokeWidth ? "var(--accent)" : undefined}
+        strokeWidth={strokeWidth}
+        strokeLinecap={strokeWidth ? "round" : undefined}
+        strokeLinejoin={strokeWidth ? "round" : undefined}
+        fillRule={fillRule}
+        clipRule={fillRule}
+      />
+      {overlay && <path d={overlay} />}
     </svg>
   );
 }
 
-function ClassImage({ src, className }: { src: string; className: string }) {
+function ClassMark({
+  meta,
+  iconSet,
+  className,
+}: {
+  meta: ClassMeta;
+  iconSet: IconSet;
+  className: string;
+}) {
+  if (iconSet === "svg") {
+    return (
+      <Icon
+        path={meta.icon}
+        overlay={meta.iconOverlay}
+        fillRule={meta.fillRule}
+        strokeWidth={meta.strokeWidth}
+        className={className}
+      />
+    );
+  }
+
+  const source =
+    iconSet === "single" ? meta.singleObjectImage : meta.generatedImage;
   return (
-    // These local PNGs are already cropped and optimized for their exact UI size.
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
+    <span
       aria-hidden="true"
-      className={className}
-      src={src}
-      alt=""
-      width="256"
-      height="256"
-      decoding="async"
-      draggable="false"
+      className={`${className} raster-icon`}
+      data-icon-source={iconSet}
+      style={
+        { "--icon-image": `url("${source}")` } as React.CSSProperties
+      }
     />
   );
 }
@@ -77,6 +113,7 @@ function headingParts(value: string) {
 
 export default function NiceExplorer() {
   const [query, setQuery] = useState("");
+  const [iconSet, setIconSet] = useState<IconSet>("single");
   const [selectedNumber, setSelectedNumber] = useState<number | null>(null);
   const [panelOpen, setPanelOpen] = useState(false);
   const searchRef = useRef<HTMLInputElement>(null);
@@ -248,7 +285,11 @@ export default function NiceExplorer() {
               <span className="class-number">
                 {String(entry.number).padStart(2, "0")}
               </span>
-              <ClassImage src={meta.image} className="class-icon" />
+              <ClassMark
+                meta={meta}
+                iconSet={iconSet}
+                className="class-icon"
+              />
               <span
                 className="class-name"
                 data-compact={meta.shortName.length > 22 || undefined}
@@ -263,45 +304,59 @@ export default function NiceExplorer() {
   );
 
   return (
-    <main className="page-shell">
+    <main className="page-shell" data-icon-set={iconSet}>
       <header className="topbar">
         <a className="site-title" href={SOURCE_URL}>
           Nice Classification
         </a>
-        <form className="search-form" role="search" onSubmit={submitSearch}>
-          <Icon path={mdiMagnify} className="search-icon" />
-          <label className="sr-only" htmlFor="class-search">
-            Search all class headings and examples
-          </label>
-          <input
-            id="class-search"
-            ref={searchRef}
-            type="search"
-            value={query}
-            onChange={(event) => setQuery(event.target.value)}
-            placeholder="Search goods and services"
-            autoComplete="off"
-            enterKeyHint="go"
-          />
-          {normalizedQuery && (
-            <span className="match-count" aria-live="polite">
-              {ranked.length ? `${ranked.length} match${ranked.length === 1 ? "" : "es"}` : "No matches"}
-            </span>
-          )}
-          {query && (
-            <button
-              className="clear-search"
-              type="button"
-              onClick={() => {
-                setQuery("");
-                searchRef.current?.focus();
-              }}
-              aria-label="Clear search"
+        <div className="topbar-tools">
+          <label className="icon-set-control">
+            <span className="sr-only">Icon style</span>
+            <select
+              value={iconSet}
+              onChange={(event) => setIconSet(event.target.value as IconSet)}
+              aria-label="Icon style"
             >
-              <Icon path={mdiClose} />
-            </button>
-          )}
-        </form>
+              <option value="svg">Basic</option>
+              <option value="single">Detailed</option>
+              <option value="generated">Complex</option>
+            </select>
+          </label>
+          <form className="search-form" role="search" onSubmit={submitSearch}>
+            <Icon path={mdiMagnify} className="search-icon" />
+            <label className="sr-only" htmlFor="class-search">
+              Search all class headings and examples
+            </label>
+            <input
+              id="class-search"
+              ref={searchRef}
+              type="search"
+              value={query}
+              onChange={(event) => setQuery(event.target.value)}
+              placeholder="Search classes"
+              autoComplete="off"
+              enterKeyHint="go"
+            />
+            {normalizedQuery && (
+              <span className="match-count" aria-live="polite">
+                {ranked.length ? `${ranked.length} match${ranked.length === 1 ? "" : "es"}` : "No matches"}
+              </span>
+            )}
+            {query && (
+              <button
+                className="clear-search"
+                type="button"
+                onClick={() => {
+                  setQuery("");
+                  searchRef.current?.focus();
+                }}
+                aria-label="Clear search"
+              >
+                <Icon path={mdiClose} />
+              </button>
+            )}
+          </form>
+        </div>
       </header>
 
       <div className="classification-map">
@@ -333,7 +388,13 @@ export default function NiceExplorer() {
         {selectedClass && selectedMeta && (
           <>
             <div className="detail-header">
-              <ClassImage src={selectedMeta.image} className="detail-icon" />
+              <span className="detail-icon">
+                <ClassMark
+                  meta={selectedMeta}
+                  iconSet={iconSet}
+                  className="detail-icon-mark"
+                />
+              </span>
               <div className="detail-heading">
                 <span className="detail-kicker">
                   Class {selectedClass.number} · {selectedClass.number <= 34 ? "Goods" : "Services"}

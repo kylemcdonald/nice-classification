@@ -6,7 +6,7 @@ A fast, single-page guide to all 45 Nice classes for trademark goods and service
 
 ## Features
 
-- 45 compact, color-grouped class cards with GPT Image 2-generated stamp illustrations
+- 45 compact, color-grouped class cards with three switchable stamp-icon sets
 - Clear separation between goods (Classes 1–34) and services (Classes 35–45)
 - Instant relevance-ranked full-text search without changing class order
 - Quick side sheet on desktop and bottom sheet on mobile
@@ -14,9 +14,13 @@ A fast, single-page guide to all 45 Nice classes for trademark goods and service
 - Keyboard support: `/` focuses search, Enter opens the best match, and Escape closes details
 - No external fonts, analytics, or runtime API calls; all images are local assets
 
-## Class images
+## Class icons
 
-Each class illustration was generated independently with OpenAI’s [`gpt-image-2`](https://developers.openai.com/api/docs/guides/image-generation) at medium quality and 1024×1024 pixels. The prompt supplies the official class heading and asks the model to choose a clear visual metaphor instead of prescribing specific objects. Full-resolution source PNGs and the prompt manifest are in `output/imagegen/nice-class-icons`; lightweight transparent versions used by the site are in `public/class-icons`.
+The icon dropdown switches instantly among **Basic** (the original SVG marks), **Detailed** (the new single-object image set), and **Complex** (the first generated image set). Detailed is the default. Both raster sets are used as masks so every mark retains its class-group color.
+
+The two image sets were generated independently with OpenAI’s [`gpt-image-2`](https://developers.openai.com/api/docs/guides/image-generation) at medium quality and 1024×1024 pixels. Each prompt supplies the official class heading and asks the model to choose its own visual metaphor. The newer prompt strongly prefers one coherent central object and permits one small supporting object only when necessary for clarity.
+
+Full-resolution source PNGs and prompt manifests are in `output/imagegen/nice-class-icons` and `output/imagegen/nice-class-icons-single-object`. Lightweight transparent 256×256 versions used by the site are in `public/class-icons` and `public/class-icons-single`.
 
 ## Data
 
