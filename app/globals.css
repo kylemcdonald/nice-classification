@@ -367,8 +367,12 @@ a {
 
 .raster-icon {
   background-color: var(--accent);
-  -webkit-mask: var(--icon-image) center / contain no-repeat;
-  mask: var(--icon-image) center / contain no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
 }
 
 .class-name {

@@ -96,9 +96,10 @@ function ClassMark({
       aria-hidden="true"
       className={`${className} raster-icon`}
       data-icon-source={iconSet}
-      style={
-        { "--icon-image": `url("${source}")` } as React.CSSProperties
-      }
+      style={{
+        WebkitMaskImage: `url("${source}")`,
+        maskImage: `url("${source}")`,
+      }}
     />
   );
 }
