@@ -24,7 +24,6 @@ import {
   mdiLaptop,
   mdiLightbulbOn,
   mdiMusicNote,
-  mdiNeedle,
   mdiNewspaperVariant,
   mdiPalette,
   mdiPill,
@@ -45,6 +44,16 @@ import {
   mdiTshirtCrew,
   mdiWall,
 } from "@mdi/js";
+
+// A sew-on button is a more immediate symbol for Nice Class 26 than a needle:
+// buttons are specifically named in the class heading, and the four holes keep
+// the silhouette recognizable even at the compact overview size.
+const mdiSewOnButton =
+  "M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z" +
+  "M8.5,7A1.5,1.5 0 1,1 8.5,10A1.5,1.5 0 1,1 8.5,7Z" +
+  "M15.5,7A1.5,1.5 0 1,1 15.5,10A1.5,1.5 0 1,1 15.5,7Z" +
+  "M8.5,14A1.5,1.5 0 1,1 8.5,17A1.5,1.5 0 1,1 8.5,14Z" +
+  "M15.5,14A1.5,1.5 0 1,1 15.5,17A1.5,1.5 0 1,1 15.5,14Z";
 
 export const groupAccents = {
   science: "#9b3c32",
@@ -93,7 +102,7 @@ export const classMeta: ClassMeta[] = [
   { shortName: "Yarns & threads", icon: mdiSineWave, group: "materials" },
   { shortName: "Textiles", icon: mdiTextureBox, group: "materials" },
   { shortName: "Clothing", icon: mdiTshirtCrew, group: "lifestyle" },
-  { shortName: "Trims & fasteners", icon: mdiNeedle, group: "lifestyle" },
+  { shortName: "Trims & fasteners", icon: mdiSewOnButton, group: "lifestyle" },
   { shortName: "Floor coverings", icon: mdiRug, group: "lifestyle" },
   { shortName: "Toys & sports", icon: mdiSoccer, group: "lifestyle" },
   { shortName: "Meat & dairy", icon: mdiFoodDrumstick, group: "food" },

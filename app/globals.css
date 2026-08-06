@@ -318,8 +318,8 @@ a {
 }
 
 .class-icon {
-  width: min(42%, 42px);
-  height: min(42%, 42px);
+  width: min(57%, 58px);
+  height: min(57%, 58px);
   align-self: center;
   justify-self: center;
   fill: var(--accent);
