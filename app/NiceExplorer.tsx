@@ -34,11 +34,17 @@ type NiceClass = {
 
 type IconSet = "single" | "generated" | "svg";
 
+const ICON_SET_STORAGE_KEY = "nice-classification-icon-set";
+
 const iconSetOptions: Array<{ value: IconSet; label: string }> = [
   { value: "svg", label: "Basic" },
   { value: "single", label: "Detailed" },
   { value: "generated", label: "Complex" },
 ];
+
+function isIconSet(value: string | null): value is IconSet {
+  return iconSetOptions.some((option) => option.value === value);
+}
 
 const niceClasses = classesJson as NiceClass[];
 function Icon({
@@ -170,6 +176,15 @@ export default function NiceExplorer() {
     setPanelOpen(true);
   }, []);
 
+  const chooseIconSet = (value: IconSet) => {
+    setIconSet(value);
+    try {
+      window.localStorage.setItem(ICON_SET_STORAGE_KEY, value);
+    } catch {
+      // Browsers that disable local storage still retain the in-session choice.
+    }
+  };
+
   const closePanel = useCallback(() => {
     if (!selectedNumber) return;
     const returnTo = selectedNumber;
@@ -188,6 +203,15 @@ export default function NiceExplorer() {
     },
     [selectedNumber],
   );
+
+  useEffect(() => {
+    try {
+      const savedIconSet = window.localStorage.getItem(ICON_SET_STORAGE_KEY);
+      if (isIconSet(savedIconSet)) setIconSet(savedIconSet);
+    } catch {
+      // Detailed remains the fallback when local storage is unavailable.
+    }
+  }, []);
 
   useEffect(() => {
     if (!panelOpen) return;
@@ -409,7 +433,7 @@ export default function NiceExplorer() {
                     tabIndex={active ? 0 : -1}
                     key={option.value}
                     onClick={() => {
-                      setIconSet(option.value);
+                      chooseIconSet(option.value);
                       setSettingsOpen(false);
                       settingsButtonRef.current?.focus({ preventScroll: true });
                     }}
